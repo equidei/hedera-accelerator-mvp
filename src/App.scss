@@ -1,0 +1,467 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    background-color: #f9b1f99b;
+    min-height: 100vh;
+
+
+    .header {
+        flex: 1;
+        min-height: 100vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        padding-top: 5rem;
+        position: relative;
+
+
+        .headerWrapper {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+
+            .title {
+                margin-top: 1rem;
+            }
+
+            img {
+                height: 30px;
+                width: 180px;
+            }
+
+            .navBar {
+                padding-top: 2rem;
+
+
+                .navList {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    padding: 0;
+                    width: 100%;
+
+                    a {
+                        .navItem {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.8rem;
+                            padding: 0.5rem 1rem;
+                            border-radius: 4px;
+                            color: white;
+                            font-weight: 500;
+
+                            svg {
+                                color: white;
+                                font-size: 22px;
+                            }
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.211);
+                            }
+
+
+                        }
+
+                        .logout {
+                            margin-top: 4rem;
+                            background-color: white;
+                            color: black;
+
+                            svg {
+                                color: black;
+                            }
+
+                            &:hover {
+                                background-color: white;
+                                color: black;
+                                cursor: pointer;
+                            }
+
+                            p {
+                                // color: ;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+
+
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex: 6;
+
+        .wrapper {
+            // height: 100%;
+            background-color: #ffffff4b;
+            // margin-top: 2rem;
+            // margin-bottom: 2rem;
+            margin: 2rem;
+            border-radius: 1rem;
+            padding: 2rem;
+            // max-width: 1084px;
+            // min-width: 1084px;
+
+
+
+            main {
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                // justify-content: center;
+                height: calc(100% - 80px);
+
+                .mainWrapper {
+                    max-width: 1084px;
+
+                    .assets {
+                        padding: 1rem;
+
+                        .title {
+                            font-weight: 900;
+                            word-spacing: 4px;
+                            text-transform: uppercase;
+                        }
+
+                        .subtitle {
+                            font-size: 15px;
+                            margin-bottom: 1rem;
+                        }
+
+                        .assetsList {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+
+                            .assetItem {
+                                align-items: center;
+                                background-color: #fbaffb4f;
+                                padding: 1rem;
+                                border-radius: 10px;
+
+                                .left {
+                                    h4 {}
+
+                                    p {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .clientTreasury {
+                        display: flex;
+                        gap: 2rem;
+                        margin: 2rem 0rem 2rem 0rem;
+
+
+                        .createClient {
+                            display: flex;
+                            flex-direction: column;
+                            // margin: 2rem 0rem 2rem 0rem;
+
+                            button {
+                                max-width: max-content;
+                                max-width: max-content;
+                                border: none;
+                                color: white;
+                                cursor: pointer;
+                                font-weight: 600;
+                                border-radius: 4px;
+                                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                                padding: 0.6rem 0.8rem;
+                                background-color: rgb(151, 17, 151);
+                                transition: 0.4s;
+
+                                &:hover {
+                                    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                                    background-color: rgb(215, 8, 215);
+                                }
+
+                            }
+                        }
+
+                        .createTreasury {
+                            display: flex;
+                            flex-direction: column;
+                            // margin: 2rem 0rem 2rem 0rem;
+
+                            button {
+                                max-width: max-content;
+                                border: none;
+                                color: white;
+                                cursor: pointer;
+                                font-weight: 600;
+                                border-radius: 4px;
+                                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                                padding: 0.6rem 0.8rem;
+                                background-color: rgb(151, 17, 151);
+                                transition: 0.4s;
+
+                                &:hover {
+                                    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                                    background-color: rgb(216, 36, 216);
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    .createAndTransfer {
+                        margin: 2rem 0rem 2rem 0rem;
+                        background-color: rgb(151, 17, 151);
+                        color: white;
+                        border-radius: 10px;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+                        .createAndTransferWrapper {
+                            padding: 1rem;
+
+                            h2 {
+                                font-weight: 900;
+                                word-spacing: 4px;
+                                // color: yellow;
+                            }
+
+                            p {
+                                font-size: 15px;
+                            }
+
+                            .createTokens {
+
+                                margin-top: 1.5rem;
+
+                                .heading {
+                                    h3 {}
+
+                                    p {
+                                        font-size: 13px;
+                                    }
+                                }
+
+                                .button {
+
+
+                                    .buttonWrapper {
+                                        margin-top: 0.6rem;
+                                        display: flex;
+                                        gap: 1rem;
+
+                                        // button {
+                                        //     border: none;
+                                        //     color: rgb(151, 17, 151);
+                                        //     cursor: pointer;
+                                        //     font-weight: 600;
+                                        //     border-radius: 4px;
+                                        //     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+
+                                        //     span {
+                                        //         display: flex;
+                                        //         flex-direction: row;
+                                        //         gap: 0.4rem;
+                                        //         align-items: center;
+                                        //         justify-content: center;
+                                        //     }
+
+                                        // }
+                                    }
+
+                                    .tokenCreationStatus {
+                                        font-size: 12px;
+                                        margin-top: 0.4rem;
+                                        color: rgb(255, 238, 0);
+
+                                        .tokenInfo {
+                                            // background-color: ffffff4d;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .associateAndTransferTokens {
+                                margin-top: 2rem;
+
+                                .heading {
+                                    h3 {}
+
+                                    p {
+                                        font-size: 13px;
+                                    }
+                                }
+
+                                .associateAccount {
+                                    display: flex;
+                                    gap: 1rem;
+                                    margin-top: 1rem;
+                                    margin-bottom: 1rem;
+
+                                    .input {
+                                        display: flex;
+                                        gap: 1rem;
+                                    }
+                                }
+
+                                .button {
+                                    display: flex;
+                                    gap: 1rem;
+                                    margin-top: 0.6rem;
+
+                                    .input {
+                                        display: flex;
+                                        gap: 1rem;
+                                    }
+
+                                    // button {
+                                    //     border: none;
+                                    //     color: rgb(151, 17, 151);
+                                    //     cursor: pointer;
+                                    //     font-weight: 600;
+                                    //     border-radius: 4px;
+                                    //     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                                    //     &:hover {
+                                    //         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.792) 0px 30px 60px -30px;
+                                    //     }
+                                    // }
+                                }
+                            }
+                        }
+                    }
+
+
+                    .balance {
+                        margin: 2rem 0rem 2rem 0rem;
+                        background-color: rgb(151, 17, 151);
+                        color: white;
+                        padding: 1rem;
+                        border-radius: 10px;
+
+                        .balanceWrapper {
+                            display: flex;
+                            // flex-direction: column;
+                            gap: 2rem;
+                            justify-content: space-between;
+
+                            .button {
+                                display: flex;
+                                gap: 1rem;
+                                margin-top: 0.6rem;
+
+                                // button {
+                                //     border: none;
+                                //     // background-color: rgb(151, 17, 151);
+                                //     color: rgb(151, 17, 151);
+                                //     cursor: pointer;
+                                //     font-weight: 600;
+                                //     border-radius: 4px;
+                                //     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                                //     &:hover {
+                                //         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.792) 0px 30px 60px -30px;
+                                //     }
+                                // }
+                            }
+                        }
+
+                        .info {
+                            display: flex;
+                            align-items: center;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    height: 35px;
+    outline: none;
+    border: none;
+    background-color: rgba(254, 254, 254, 0.157);
+    border-radius: 3px;
+    color: white;
+    padding: 0.2rem 0.6rem;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.514);
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button__primary {
+    max-width: max-content;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0.6rem 0.8rem;
+    background-color: rgb(151, 17, 151);
+    transition: 0.4s;
+
+    &:hover {
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        background-color: rgb(216, 36, 216);
+    }
+}
+
+
+.button__secondary {
+    border: none;
+    color: rgb(151, 17, 151);
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // height: 40px;
+
+
+    span {
+        display: flex;
+        flex-direction: row;
+        gap: 0.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.button__third {
+    height: 40px;
+}
