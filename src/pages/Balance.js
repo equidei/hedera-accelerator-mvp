@@ -25,7 +25,6 @@ const Balance = () => {
     const operatorKey = PrivateKey.fromString(process.env.REACT_APP_OPERATOR_PV_KEY);
     const client = Client.forTestnet();
     client.setOperator(operatorId, operatorKey);
-    console.log(operatorId, operatorKey)
 
     // Generating a private key which will be treated as a "supply key"
     const supplyKey = PrivateKey.generate();
@@ -58,7 +57,9 @@ const Balance = () => {
 
         try {
             let balanceQueryTx = new AccountBalanceQuery().setAccountId(tokenBalanceAccountIdRef.current.value).execute(client);
-            console.log(`- Treasury balance: ${(await balanceQueryTx).tokens._map.get(tokenBalanceTokenIdRef.toString())} units of token ID ${tokenBalanceTokenIdRef.current.value}`);
+            console.log(`- Treasury balance submit object: ${(await balanceQueryTx).toString()} units of token ID ${tokenBalanceTokenIdRef.current.value}`);
+            console.log(`- Tokens that the MSME have : ${(await balanceQueryTx).tokens.toString()} units of token ID ${tokenBalanceTokenIdRef.current.value}`);
+            console.log(`- Balance for the asked token is: ${(await balanceQueryTx).tokens._map.get(tokenBalanceTokenIdRef.toString())} units of token ID ${tokenBalanceTokenIdRef.current.value}`);
             const tokenBlc = (await balanceQueryTx).tokens._map.get(tokenBalanceTokenIdRef.current.value.toString()).toString()
             setTokenBalance(tokenBlc)
             console.log(tokenBalance)

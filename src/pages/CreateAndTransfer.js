@@ -33,7 +33,6 @@ const CreateAndTransfer = () => {
     const operatorKey = PrivateKey.fromString(process.env.REACT_APP_OPERATOR_PV_KEY);
     const client = Client.forTestnet();
     client.setOperator(operatorId, operatorKey);
-    console.log(operatorId, operatorKey)
 
     // Generating a private key which will be treated as a "supply key"
     const supplyKey = PrivateKey.generate();
@@ -51,7 +50,6 @@ const CreateAndTransfer = () => {
         // const msmePvKey = PrivateKey.fromString(process.env.REACT_APP_MSME_PV_KEY);
 
         const msmePvKey = PrivateKey.fromString(associateKeyRef.current.value);
-        console.log("Account to be associate with Id:", msmePvKey)
 
         // setTimeout(async () => {
         // console.log("Account to be associate with Id:", msmeId.toString())
@@ -63,9 +61,7 @@ const CreateAndTransfer = () => {
             .sign(msmePvKey);
 
         let associateTxSubmit = await associateTx.execute(client);
-        console.log("Associate Account Submit Transaction:", associateTxSubmit)
         let associateRc = await associateTxSubmit.getReceipt(client);
-        console.log("Associate Account Transaction Receipt:", associateRc);
         console.log(`- Token association with Msme's account having account Id ${associateIdRef.current.value} is ${associateRc.status.toString()}  \n`);
         // }, 5000);
         setAssociateLoading(false);
@@ -197,7 +193,7 @@ const CreateAndTransfer = () => {
                                 <button className='button__secondary' onClick={transferToken}>
                                     {
                                         createTokenLoading ? <p> Transferring Tokens <ColorRing visible={true} height="80" width="80" ariaLabel="blocks-loading" wrapperStyle={{}} wrapperClass="blocks-wrapper" colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']} /></p>
-                                            : "Send tokens transfer for approval"
+                                            : "Initiate Token Transfer"
                                     }
                                 </button>
                             </div>
