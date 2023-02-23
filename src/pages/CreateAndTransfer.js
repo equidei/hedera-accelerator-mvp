@@ -72,8 +72,8 @@ const CreateAndTransfer = () => {
         setTransferLoading(true);
         try {
             const createTokenTx = new TokenCreateTransaction()
-                .setTokenName("Example")
-                .setTokenSymbol("EXPL")
+                .setTokenName("EquiDEI Token")
+                .setTokenSymbol("DEI")
                 .setTokenType(TokenType.FungibleCommon)
                 .setDecimals(0)
                 .setInitialSupply(tokenAmountRef.current.value)
@@ -176,7 +176,6 @@ const CreateAndTransfer = () => {
                                     <input type="password" ref={associateKeyRef} placeholder='Account Key' />
                                 </div>
                                 <button className='button__secondary' onClick={associateIdRef && associateKeyRef && associateAccount}>
-
                                     {
                                         associateLoading ? <span> <p>Associating Account...</p> <p> <ColorRing visible={true} height="20" width="20" ariaLabel="blocks-loading" wrapperStyle={{}} wrapperClass="blocks-wrapper" color="#fff" /></p></span>
                                             : "Associate Account"
@@ -186,7 +185,7 @@ const CreateAndTransfer = () => {
                             <div className="button">
                                 <span className='input'>
                                     {/* <input type="text" ref={associateIdRef} placeholder='Account Id of Trust/Investor' />
-        <input type="text" ref={associateKeyRef} placeholder='Account Key of Trust/Investor' /> */}
+                                    <input type="text" ref={associateKeyRef} placeholder='Account Key of Trust/Investor' /> */}
                                     <input type="text" placeholder='No. of tokens' ref={transferTokenNoRef} />
                                     <input type="text" placeholder='MSME Id' ref={transferMsmeIdRef} />
                                 </span>

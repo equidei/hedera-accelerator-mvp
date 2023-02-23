@@ -104,7 +104,7 @@ const Balance = () => {
                         {<>
                             <span className='ml-1rem' style={{ fontSize: "13px", marginRight: "0.5rem" }}>Your Balance is:</span>
                             <span style={{ color: tokenBalanceErr ? "red" : "yellow", fontSize: "13px", fontWeight: "700" }}>
-                                {tokenBalanceLoading ? <InfinitySpin width='50' color="#ffff00" /> : tokenBalance}
+                                {tokenBalanceLoading ? <InfinitySpin width='50' color="#ffff00" /> : <p>{tokenBalance} DEI</p>}
                             </span>
                         </>
                         }
